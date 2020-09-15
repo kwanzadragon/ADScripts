@@ -1,7 +1,7 @@
 #find replace "backup" and create your own UNC path 
 #run script on your computer as administratior type in hostname at prompt.
-$destination = "\\nas1\techmoves\samsa\"
-$computername = read-host -prompt 'target machines DP number (or hostname)'
+$destination = "\\UNC\Path\"
+$computername = read-host -prompt 'target machines hostname'
 
 #List users in userprofile on target machine and size of all profiles excluding hidden folders in gigabytes
 $userprofiles = Get-ChildItem \\$computername\c$\users -directory
